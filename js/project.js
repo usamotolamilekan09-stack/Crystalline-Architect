@@ -25,25 +25,82 @@ function getProjectImageDimensions(image) {
 }
 
 function getProjectGalleryItems(project) {
+  const altMap = typeof projectImageAltText !== 'undefined' ? projectImageAltText : {};
+
   if (Array.isArray(project.galleryImages) && project.galleryImages.length) {
     return project.galleryImages
       .filter(image => image && image.src)
       .map((image, index) => ({
         src: image.src,
         srcset: image.srcset || '',
-        alt: image.alt || `${project.title} — view ${index + 1}`,
+        alt: image.alt || altMap[image.src] || `${project.title} — view ${index + 1}`,
         width: image.width || null,
         height: image.height || null
       }));
   }
 
-  return getProjectImages(project).map((src, index) => ({
+  const images = getProjectImages(project);
+  const galleryImages = project.coverImage
+    ? images.filter((src) => src !== project.coverImage)
+    : images;
+
+  return galleryImages.map((src, index) => ({
     src,
     srcset: '',
-    alt: `${project.title} — view ${index + 1}`,
+    alt: altMap[src] || `${project.title} — view ${index + 1}`,
     width: null,
     height: null
   }));
+}
+
+function setMetaTag(attribute, key, content) {
+  if (!content) return;
+
+  let element = document.head.querySelector(`meta[${attribute}="${key}"]`);
+  if (!element) {
+    element = document.createElement('meta');
+    element.setAttribute(attribute, key);
+    document.head.appendChild(element);
+  }
+
+  element.setAttribute('content', content);
+}
+
+function toAbsoluteUrl(src) {
+  if (!src) return '';
+
+  try {
+    return new URL(src, window.location.href).href;
+  } catch (error) {
+    return src;
+  }
+}
+
+function updateProjectSeo(project) {
+  const title = project.seoTitle || `${project.title} — Crystalline Architects`;
+  const description = project.seoDescription || project.shortDescription || project.description || 'Project by Crystalline Architects.';
+  const cover = typeof getProjectCover === 'function' ? getProjectCover(project) : project.coverImage;
+  const image = toAbsoluteUrl(cover);
+  const imageAlt = project.coverImageAlt || project.title;
+
+  document.title = title;
+  setMetaTag('name', 'description', description);
+  setMetaTag('property', 'og:title', title);
+  setMetaTag('property', 'og:description', description);
+  setMetaTag('name', 'twitter:title', title);
+  setMetaTag('name', 'twitter:description', description);
+
+  if (image) {
+    setMetaTag('property', 'og:image', image);
+    setMetaTag('property', 'og:image:alt', imageAlt);
+    setMetaTag('name', 'twitter:image', image);
+    setMetaTag('name', 'twitter:image:alt', imageAlt);
+  }
+
+  if (project.coverImageWidth && project.coverImageHeight) {
+    setMetaTag('property', 'og:image:width', String(project.coverImageWidth));
+    setMetaTag('property', 'og:image:height', String(project.coverImageHeight));
+  }
 }
 
 function renderProjectFacts(project) {
@@ -164,6 +221,12 @@ function renderNextProject(project) {
 
 function renderProjectError(container, title, text) {
   document.title = `${title} — Crystalline Architects`;
+  setMetaTag('name', 'description', text);
+  setMetaTag('property', 'og:title', document.title);
+  setMetaTag('property', 'og:description', text);
+  setMetaTag('name', 'twitter:title', document.title);
+  setMetaTag('name', 'twitter:description', text);
+  setMetaTag('name', 'robots', 'noindex, follow');
   container.innerHTML = `
     <section class="empty-state">
       <div class="container">
@@ -218,12 +281,7 @@ async function renderProjectDetail() {
     ? `<p class="project-gallery-note">${escapeHtmlProject(galleryNoteText)}</p>`
     : '';
 
-  document.title = project.seoTitle || `${project.title} — Crystalline Architects`;
-
-  const description = document.querySelector('meta[name="description"]');
-  if (description) {
-    description.setAttribute('content', project.seoDescription || project.shortDescription || project.description || 'Project by Crystalline Architects.');
-  }
+  updateProjectSeo(project);
 
   container.innerHTML = `
     ${renderProjectHero(project, category)}

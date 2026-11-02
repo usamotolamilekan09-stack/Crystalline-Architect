@@ -106,8 +106,8 @@ const projects = [
     architect: 'Crystalline Architects',
     order: 5,
     featured: false,
-    shortDescription: 'A residential project documented through exterior views, floor plans, interior studies and material moodboards.',
-    description: 'A residential project comprising exterior views, floor plans, interior studies and material moodboards.',
+    shortDescription: 'A residential building design presented through two exterior renders.',
+    description: 'A residential building design documented through two exterior renders.',
     imageFiles: ['residential-project-01.jpg','residential-project-02.jpg'],
   },
   {

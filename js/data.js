@@ -16,7 +16,7 @@ const projects = [
     description: "A three-bedroom residential duplex located in Ibadan.",
     expectedImageCount: 2,
     coverImage: "images/projects/three-bedroom-duplex-ibadan-01.jpg",
-    coverImageAlt: "Three-Bedroom Duplex, Ibadan - project view",
+    coverImageAlt: "View of the Three-Bedroom Duplex in Ibadan",
     images: [
       "images/projects/three-bedroom-duplex-ibadan-01.jpg",
       "images/projects/three-bedroom-duplex-ibadan-02.jpg"
@@ -39,7 +39,7 @@ const projects = [
     description: "A hospitality project in Ikorodu, Lagos, designed by Crystalline Architects and currently under construction.",
     expectedImageCount: 3,
     coverImage: "images/projects/hotel-ikorodu-01.jpg",
-    coverImageAlt: "Hotel, Ikorodu - project view",
+    coverImageAlt: "View of the Hotel in Ikorodu, Lagos",
     images: [
       "images/projects/hotel-ikorodu-01.jpg",
       "images/projects/hotel-ikorodu-02.jpg",
@@ -49,7 +49,7 @@ const projects = [
   {
     id: 3,
     slug: "residential-project",
-    title: "Residential Project",
+    title: "Residential Building Design",
     categories: ["Residential"],
     category: "Residential",
     location: "",
@@ -59,11 +59,11 @@ const projects = [
     architect: "Crystalline Architects",
     order: 5,
     featured: false,
-    shortDescription: "A residential project documented through exterior views, floor plans, interior studies and material moodboards.",
-    description: "A residential project comprising exterior views, floor plans, interior studies and material moodboards.",
-    expectedImageCount: 6,
+    shortDescription: "A residential building design presented through two exterior renders.",
+    description: "A residential building design documented through two exterior renders.",
+    expectedImageCount: 2,
     coverImage: "images/projects/residential-project-01.jpg",
-    coverImageAlt: "Residential Project - exterior view",
+    coverImageAlt: "Exterior render of the Residential Building Design",
     images: [
       "images/projects/residential-project-01.jpg",
       "images/projects/residential-project-02.jpg"
@@ -86,7 +86,7 @@ const projects = [
     description: "A residential scheme comprising a five-bedroom duplex and two two-bedroom units.",
     expectedImageCount: 2,
     coverImage: "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-    coverImageAlt: "Five-Bedroom Duplex with Two-Bedroom Units - exterior view",
+    coverImageAlt: "View of the Five-Bedroom Duplex with Two-Bedroom Units",
     images: [
       "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
       "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg"
@@ -109,7 +109,7 @@ const projects = [
     description: "A proposed mixed-use development in Ikeja LGA, Lagos, prepared for Murphy Ben International Ltd. in July 2026. The proposal is documented through six exterior views.",
     expectedImageCount: 6,
     coverImage: "images/projects/mixed-use-development-ikeja-01.jpg",
-    coverImageAlt: "Mixed-Use Development, Ikeja - 3D view",
+    coverImageAlt: "Exterior view of the proposed Mixed-Use Development in Ikeja, Lagos",
     images: [
       "images/projects/mixed-use-development-ikeja-01.jpg",
       "images/projects/mixed-use-development-ikeja-02.jpg",
@@ -120,6 +120,24 @@ const projects = [
     ]
   }
 ];
+
+const projectImageAltText = {
+  "images/projects/three-bedroom-duplex-ibadan-01.jpg": "View of the Three-Bedroom Duplex in Ibadan",
+  "images/projects/three-bedroom-duplex-ibadan-02.jpg": "Second view of the Three-Bedroom Duplex in Ibadan",
+  "images/projects/hotel-ikorodu-01.jpg": "View of the Hotel in Ikorodu, Lagos",
+  "images/projects/hotel-ikorodu-02.jpg": "Second view of the Hotel in Ikorodu, Lagos",
+  "images/projects/hotel-ikorodu-03.jpg": "Third view of the Hotel in Ikorodu, Lagos",
+  "images/projects/residential-project-01.jpg": "Exterior render of the Residential Building Design",
+  "images/projects/residential-project-02.jpg": "Second exterior render of the Residential Building Design",
+  "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg": "View of the Five-Bedroom Duplex with Two-Bedroom Units",
+  "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg": "Second view of the Five-Bedroom Duplex with Two-Bedroom Units",
+  "images/projects/mixed-use-development-ikeja-01.jpg": "Exterior view of the proposed Mixed-Use Development in Ikeja, Lagos",
+  "images/projects/mixed-use-development-ikeja-02.jpg": "Second exterior view of the proposed Mixed-Use Development in Ikeja, Lagos",
+  "images/projects/mixed-use-development-ikeja-03.jpg": "Third exterior view of the proposed Mixed-Use Development in Ikeja, Lagos",
+  "images/projects/mixed-use-development-ikeja-04.jpg": "Fourth exterior view of the proposed Mixed-Use Development in Ikeja, Lagos",
+  "images/projects/mixed-use-development-ikeja-05.jpg": "Fifth exterior view of the proposed Mixed-Use Development in Ikeja, Lagos",
+  "images/projects/mixed-use-development-ikeja-06.jpg": "Sixth exterior view of the proposed Mixed-Use Development in Ikeja, Lagos"
+};
 
 const projectImageDimensions = {
   "images/projects/three-bedroom-duplex-ibadan-01.jpg": { width: 1600, height: 1019 },

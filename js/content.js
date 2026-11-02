@@ -99,8 +99,40 @@
       .join(', ');
   }
 
-  function normalizeGallery(document) {
+  function getFallbackProject(legacyId) {
+    if (typeof projects === 'undefined' || !Array.isArray(projects)) return null;
+    return projects.find((project) => String(project.id) === String(legacyId)) || null;
+  }
+
+  function isGenericProjectAlt(alt, title, index) {
+    if (!alt) return true;
+
+    const value = String(alt).trim();
+    if (!value) return true;
+    if (value === title) return true;
+    if (value === `${title} ${index + 1}`) return true;
+    if (value === `${title} ${index + 2}`) return true;
+    if (value === `${title} — view ${index + 1}`) return true;
+    if (/^project image \d+$/i.test(value)) return true;
+
+    return false;
+  }
+
+  function getFallbackGalleryAlt(fallbackProject, index) {
+    if (!fallbackProject || !Array.isArray(fallbackProject.images)) return '';
+
+    const galleryImages = fallbackProject.coverImage
+      ? fallbackProject.images.filter((src) => src !== fallbackProject.coverImage)
+      : fallbackProject.images;
+    const src = galleryImages[index];
+    if (!src || typeof projectImageAltText === 'undefined') return '';
+
+    return projectImageAltText[src] || '';
+  }
+
+  function normalizeGallery(document, fallbackProject) {
     const gallery = Array.isArray(document.gallery) ? document.gallery : [];
+    const title = document.title || 'Project';
 
     return gallery
       .map((item, index) => {
@@ -109,11 +141,16 @@
         if (!src) return null;
 
         const dimensions = getDimensions(image);
+        let alt = item.alt;
+
+        if (isGenericProjectAlt(alt, title, index)) {
+          alt = getFallbackGalleryAlt(fallbackProject, index) || alt || `${title} — view ${index + 1}`;
+        }
 
         return {
           src,
           srcset: buildSrcSet(image),
-          alt: item.alt || `${document.title || 'Project'} — view ${index + 1}`,
+          alt,
           caption: item.caption || '',
           width: dimensions?.width || null,
           height: dimensions?.height || null,
@@ -124,6 +161,7 @@
   }
 
   function normalizeProject(document) {
+    const fallbackProject = getFallbackProject(document.legacyId);
     const categories = Array.isArray(document.categories) ? document.categories.filter(Boolean) : [];
     const categoryTitles = categories
       .map((category) => (typeof category === 'string' ? category : category.title))
@@ -134,7 +172,12 @@
       )
       .filter(Boolean);
     const coverDimensions = getDimensions(document.coverImage);
-    const galleryImages = normalizeGallery(document);
+    const galleryImages = normalizeGallery(document, fallbackProject);
+    const title = document.title || 'Project';
+    const rawCoverAlt = document.coverImage?.alt;
+    const coverAlt = isGenericProjectAlt(rawCoverAlt, title, 0)
+      ? fallbackProject?.coverImageAlt || rawCoverAlt || title
+      : rawCoverAlt;
 
     return {
       id: document.legacyId ?? document._id ?? document.slug,
@@ -156,7 +199,7 @@
       description: document.description || document.shortDescription || '',
       galleryNote: document.galleryNote || '',
       coverImage: buildImageUrl(document.coverImage, 1600),
-      coverImageAlt: document.coverImage?.alt || document.title || '',
+      coverImageAlt: coverAlt || title,
       coverImageSrcset: buildSrcSet(document.coverImage),
       coverImageWidth: coverDimensions?.width || null,
       coverImageHeight: coverDimensions?.height || null,
