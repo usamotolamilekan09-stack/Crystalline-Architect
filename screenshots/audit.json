@@ -9,8 +9,8 @@
       "h2": {
         "l": 20,
         "r": 300,
-        "t": -4074.8,
-        "b": -3980.9,
+        "t": -4180.8,
+        "b": -4086.9,
         "w": 280,
         "h": 93.9,
         "scrollWidth": 280,
@@ -18,16 +18,16 @@
         "parent": {
           "l": 20,
           "r": 300,
-          "t": -4130,
-          "b": -3980.9,
+          "t": -4236,
+          "b": -4086.9,
           "w": 280,
           "h": 149.1
         },
         "section": {
           "l": 0,
           "r": 320,
-          "t": -4210,
-          "b": -3336,
+          "t": -4316,
+          "b": -3442,
           "w": 320,
           "h": 874
         }
@@ -39,8 +39,8 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -2901.2,
-            "b": -2743.7,
+            "t": -3007.2,
+            "b": -2849.7,
             "w": 280,
             "h": 157.5
           },
@@ -58,8 +58,8 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -2556.8,
-            "b": -2399.3,
+            "t": -2662.8,
+            "b": -2505.3,
             "w": 280,
             "h": 157.5
           },
@@ -77,8 +77,8 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -2257.9,
-            "b": -2079.6,
+            "t": -2363.9,
+            "b": -2185.6,
             "w": 280,
             "h": 178.3
           },
@@ -113,8 +113,8 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -1706.1,
-            "b": -1548.6,
+            "t": -1632.1,
+            "b": -1474.6,
             "w": 280,
             "h": 157.5
           },
@@ -132,8 +132,8 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -1361.8,
-            "b": -1204.3,
+            "t": -1287.8,
+            "b": -1130.3,
             "w": 280,
             "h": 157.5
           },
@@ -151,8 +151,8 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -1062.8,
-            "b": -884.5,
+            "t": -988.8,
+            "b": -810.5,
             "w": 280,
             "h": 178.3
           },
@@ -170,15 +170,15 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -717.5,
-            "b": -465.9,
+            "t": -643.5,
+            "b": -465.6,
             "w": 280,
-            "h": 251.6
+            "h": 177.9
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-            "nw": 1323,
-            "nh": 1189,
+            "nw": 1481,
+            "nh": 941,
             "fit": "cover"
           },
           "placeholder": false
@@ -189,8 +189,8 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -273.3,
-            "b": -63.3,
+            "t": -273,
+            "b": -63,
             "w": 280,
             "h": 210
           },
@@ -217,15 +217,15 @@
           "rect": {
             "l": 20,
             "r": 300,
-            "t": -1208,
-            "b": -956.4,
+            "t": -952,
+            "b": -774.1,
             "w": 280,
-            "h": 251.6
+            "h": 177.9
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-            "nw": 1323,
-            "nh": 1189,
+            "nw": 1481,
+            "nh": 941,
             "fit": "cover"
           },
           "placeholder": false
@@ -235,15 +235,15 @@
           "rect": {
             "l": 20,
             "r": 300,
-            "t": -940.4,
-            "b": -567.1,
+            "t": -758.1,
+            "b": -567.3,
             "w": 280,
-            "h": 373.3
+            "h": 190.8
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg",
-            "nw": 756,
-            "nh": 1008,
+            "nw": 1381,
+            "nh": 941,
             "fit": "cover"
           },
           "placeholder": false
@@ -518,8 +518,8 @@
           "media": {
             "l": 20,
             "r": 355,
-            "t": -1801.2,
-            "b": -1612.8,
+            "t": -1712.2,
+            "b": -1523.8,
             "w": 335,
             "h": 188.4
           },
@@ -537,8 +537,8 @@
           "media": {
             "l": 20,
             "r": 355,
-            "t": -1437,
-            "b": -1248.5,
+            "t": -1348,
+            "b": -1159.5,
             "w": 335,
             "h": 188.4
           },
@@ -556,8 +556,8 @@
           "media": {
             "l": 20,
             "r": 355,
-            "t": -1107.1,
-            "b": -893.8,
+            "t": -1018.1,
+            "b": -804.8,
             "w": 335,
             "h": 213.3
           },
@@ -575,15 +575,15 @@
           "media": {
             "l": 20,
             "r": 355,
-            "t": -752.3,
-            "b": -451.3,
+            "t": -663.3,
+            "b": -450.5,
             "w": 335,
-            "h": 301.1
+            "h": 212.8
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-            "nw": 1323,
-            "nh": 1189,
+            "nw": 1481,
+            "nh": 941,
             "fit": "cover"
           },
           "placeholder": false
@@ -594,8 +594,8 @@
           "media": {
             "l": 20,
             "r": 355,
-            "t": -284.3,
-            "b": -33,
+            "t": -283.5,
+            "b": -32.2,
             "w": 335,
             "h": 251.3
           },
@@ -622,15 +622,15 @@
           "rect": {
             "l": 20,
             "r": 355,
-            "t": -1269,
-            "b": -968,
+            "t": -963,
+            "b": -750.2,
             "w": 335,
-            "h": 301.1
+            "h": 212.8
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-            "nw": 1323,
-            "nh": 1189,
+            "nw": 1481,
+            "nh": 941,
             "fit": "cover"
           },
           "placeholder": false
@@ -640,15 +640,15 @@
           "rect": {
             "l": 20,
             "r": 355,
-            "t": -952,
-            "b": -505.3,
+            "t": -734.2,
+            "b": -505.9,
             "w": 335,
-            "h": 446.7
+            "h": 228.3
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg",
-            "nw": 756,
-            "nh": 1008,
+            "nw": 1381,
+            "nh": 941,
             "fit": "cover"
           },
           "placeholder": false
@@ -923,8 +923,8 @@
           "media": {
             "l": 20,
             "r": 410,
-            "t": -2003.4,
-            "b": -1784,
+            "t": -1900.4,
+            "b": -1681,
             "w": 390,
             "h": 219.4
           },
@@ -942,8 +942,8 @@
           "media": {
             "l": 20,
             "r": 410,
-            "t": -1599.4,
-            "b": -1380,
+            "t": -1496.4,
+            "b": -1277,
             "w": 390,
             "h": 219.4
           },
@@ -961,8 +961,8 @@
           "media": {
             "l": 20,
             "r": 410,
-            "t": -1238.6,
-            "b": -990.2,
+            "t": -1135.6,
+            "b": -887.2,
             "w": 390,
             "h": 248.4
           },
@@ -980,15 +980,15 @@
           "media": {
             "l": 20,
             "r": 410,
-            "t": -848.8,
-            "b": -498.3,
+            "t": -745.8,
+            "b": -498,
             "w": 390,
-            "h": 350.5
+            "h": 247.8
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-            "nw": 1323,
-            "nh": 1189,
+            "nw": 1481,
+            "nh": 941,
             "fit": "cover"
           },
           "placeholder": false
@@ -999,8 +999,8 @@
           "media": {
             "l": 20,
             "r": 410,
-            "t": -331.3,
-            "b": -38.8,
+            "t": -331,
+            "b": -38.5,
             "w": 390,
             "h": 292.5
           },
@@ -1027,15 +1027,15 @@
           "rect": {
             "l": 20,
             "r": 410,
-            "t": -1368,
-            "b": -1017.5,
+            "t": -1011,
+            "b": -763.2,
             "w": 390,
-            "h": 350.5
+            "h": 247.8
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-            "nw": 1323,
-            "nh": 1189,
+            "nw": 1481,
+            "nh": 941,
             "fit": "cover"
           },
           "placeholder": false
@@ -1045,15 +1045,15 @@
           "rect": {
             "l": 20,
             "r": 410,
-            "t": -1001.5,
+            "t": -747.2,
             "b": -481.5,
             "w": 390,
-            "h": 520
+            "h": 265.7
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg",
-            "nw": 756,
-            "nh": 1008,
+            "nw": 1381,
+            "nh": 941,
             "fit": "cover"
           },
           "placeholder": false
@@ -1102,8 +1102,8 @@
           },
           "img": {
             "src": "images/projects/mixed-use-development-ikeja-02.jpg",
-            "nw": 1600,
-            "nh": 900,
+            "nw": 0,
+            "nh": 0,
             "fit": "cover"
           },
           "placeholder": false
@@ -1120,8 +1120,8 @@
           },
           "img": {
             "src": "images/projects/mixed-use-development-ikeja-03.jpg",
-            "nw": 1600,
-            "nh": 900,
+            "nw": 0,
+            "nh": 0,
             "fit": "cover"
           },
           "placeholder": false
@@ -1182,7 +1182,11 @@
         }
       ],
       "brokenImages": [],
-      "unloadedImages": [],
+      "unloadedImages": [
+        "images/projects/mixed-use-development-ikeja-01.jpg",
+        "images/projects/mixed-use-development-ikeja-02.jpg",
+        "images/projects/mixed-use-development-ikeja-03.jpg"
+      ],
       "title": "Mixed-Use Development — Crystalline Architects"
     },
     {

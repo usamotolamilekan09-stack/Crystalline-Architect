@@ -62,9 +62,12 @@ const projects = [
     shortDescription: "A residential project documented through exterior views, floor plans, interior studies and material moodboards.",
     description: "A residential project comprising exterior views, floor plans, interior studies and material moodboards.",
     expectedImageCount: 6,
-    coverImage: null,
-    coverImageAlt: "",
-    images: []
+    coverImage: "images/projects/residential-project-01.jpg",
+    coverImageAlt: "Residential Project - exterior view",
+    images: [
+      "images/projects/residential-project-01.jpg",
+      "images/projects/residential-project-02.jpg"
+    ]
   },
   {
     id: 4,
@@ -130,6 +133,8 @@ const projectImageDimensions = {
   "images/projects/mixed-use-development-ikeja-04.jpg": { width: 1155, height: 940 },
   "images/projects/mixed-use-development-ikeja-05.jpg": { width: 1600, height: 900 },
   "images/projects/mixed-use-development-ikeja-06.jpg": { width: 1162, height: 940 },
-  "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg": { width: 1481, height: 941 },
-  "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg": { width: 1381, height: 941 }
+  "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg": { width: 1323, height: 1189 },
+  "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg": { width: 756, height: 1008 },
+  "images/projects/residential-project-01.jpg": { width: 1481, height: 941 },
+  "images/projects/residential-project-02.jpg": { width: 1381, height: 941 }
 };

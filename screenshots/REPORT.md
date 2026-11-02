@@ -12,9 +12,10 @@ Date: 2026-11-01
   - `js/main.js` now adds `--media-ratio` from `projectImageDimensions`.
   - At `max-width: 780px`, project-card media uses `aspect-ratio: var(--media-ratio, 4 / 3)` instead of forcing `4 / 3` cropping.
 - Added the two exterior images for `Five-Bedroom Duplex with Two-Bedroom Units` (`id: 4`).
-  - `images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg` (1323×1189)
-  - `images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg` (756×1008)
+  - `Fifth design.jpeg` → `images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg` (1481×941)
+  - `Fifth design ii.jpeg` → `images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg` (1381×941)
   - Updated `js/data.js` cover, gallery, and dimensions.
+  - Both images classify strongly as modern duplex exterior renders and are highly similar to each other.
 
 ## Verification
 
@@ -40,7 +41,7 @@ Tested at 320, 360, 375, 390, and 430px on `index.html`, `projects.html`, `proje
 
 ## Image Assignment Note
 
-`Fourth design iv.jpeg` is clearly an exterior rendering and is the cover for project 4. `Fourth design v.jpeg` is the second image, confirmed by the client as the intended second exterior image.
+The `Fifth design` pair was found after the initial Fourth Design pass and is the correct two-image set for project 4: `Fifth design.jpeg` is the cover and `Fifth design ii.jpeg` is the second gallery image. Both are landscape exterior renders, so the mobile cards and gallery stay compact. The earlier `Fourth design iv.jpeg` / `v.jpeg` candidates are not used.
 
 The fifth visible card, `Residential Project` (`id: 3`), remains a placeholder because no matching source images, PDF pages, floor plans, interiors, or moodboards were found in `images/`.
 
