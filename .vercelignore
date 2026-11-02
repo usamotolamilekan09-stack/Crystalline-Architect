@@ -1,0 +1,49 @@
+# Source and backups: keep in Git, exclude from deployment
+/studio/
+/screenshots/
+/.git/
+/.vercel/
+/node_modules/
+/.gitignore
+
+# Environment and credentials
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# Temporary/local scripts and artifacts
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Unused legacy/development images
+/images/Crsytalline.jpg
+/images/Crystalline Architects Black Logo.png
+/images/Crystalline Dark.jpg
+/images/crystalline_architects_white_transparent.png
+/images/Fifth design ii.jpeg
+/images/Fifth design.jpeg
+/images/First Design.pdf
+/images/Fourth Design i.jpeg
+/images/Fourth design ii.jpeg
+/images/Fourth design iii.jpeg
+/images/Fourth design iv.jpeg
+/images/Fourth design v.jpeg
+/images/hero-architecture-1600.jpg
+/images/hero-architecture-900.jpg
+/images/Second design ii.jpeg
+/images/Second Design iii.jpeg
+/images/Thid design ii.jpeg
+/images/Third design iii.jpeg
+/images/Thrid deign i.jpeg
+/images/favicon/favicon-192x192.png
+/images/favicon/favicon-48x48.png
+/images/favicon/favicon-512x512.png
