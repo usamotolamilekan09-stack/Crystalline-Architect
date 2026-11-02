@@ -44,6 +44,9 @@ function renderProjectMedia(project, index, options = {}) {
   const sizeAttributes = dimensions
     ? ` width="${dimensions.width}" height="${dimensions.height}"`
     : '';
+  const ratioStyle = dimensions
+    ? ` style="--media-ratio: ${dimensions.width} / ${dimensions.height}"`
+    : '';
 
   const media = cover
     ? `<img src="${escapeHtml(cover)}" alt="${escapeHtml(project.coverImageAlt || project.title)}"${sizeAttributes} loading="${loading}"${priority} decoding="async">`
@@ -53,7 +56,7 @@ function renderProjectMedia(project, index, options = {}) {
     ? '<span class="project-view">View project <span aria-hidden="true">&#8599;</span></span>'
     : '';
 
-  return `<div class="project-media">${media}${status}${view}</div>`;
+  return `<div class="project-media"${ratioStyle}>${media}${status}${view}</div>`;
 }
 
 function formatProjectMeta(project) {

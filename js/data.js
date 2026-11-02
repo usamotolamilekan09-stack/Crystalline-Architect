@@ -82,9 +82,12 @@ const projects = [
     shortDescription: "A five-bedroom duplex with two additional two-bedroom units.",
     description: "A residential scheme comprising a five-bedroom duplex and two two-bedroom units.",
     expectedImageCount: 2,
-    coverImage: null,
-    coverImageAlt: "",
-    images: []
+    coverImage: "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
+    coverImageAlt: "Five-Bedroom Duplex with Two-Bedroom Units - exterior view",
+    images: [
+      "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
+      "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg"
+    ]
   },
   {
     id: 5,
@@ -126,5 +129,7 @@ const projectImageDimensions = {
   "images/projects/mixed-use-development-ikeja-03.jpg": { width: 1600, height: 900 },
   "images/projects/mixed-use-development-ikeja-04.jpg": { width: 1155, height: 940 },
   "images/projects/mixed-use-development-ikeja-05.jpg": { width: 1600, height: 900 },
-  "images/projects/mixed-use-development-ikeja-06.jpg": { width: 1162, height: 940 }
+  "images/projects/mixed-use-development-ikeja-06.jpg": { width: 1162, height: 940 },
+  "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg": { width: 1481, height: 941 },
+  "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg": { width: 1381, height: 941 }
 };

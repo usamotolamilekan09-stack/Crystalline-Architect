@@ -1,0 +1,1217 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "page": "index.html",
+      "vw": 320,
+      "sw": 320,
+      "bodyOverflowX": "clip",
+      "h2": {
+        "l": 20,
+        "r": 300,
+        "t": -4074.8,
+        "b": -3980.9,
+        "w": 280,
+        "h": 93.9,
+        "scrollWidth": 280,
+        "clientWidth": 280,
+        "parent": {
+          "l": 20,
+          "r": 300,
+          "t": -4130,
+          "b": -3980.9,
+          "w": 280,
+          "h": 149.1
+        },
+        "section": {
+          "l": 0,
+          "r": 320,
+          "t": -4210,
+          "b": -3336,
+          "w": 320,
+          "h": 874
+        }
+      },
+      "cards": [
+        {
+          "i": 0,
+          "title": "Mixed-Use Development",
+          "media": {
+            "l": 20,
+            "r": 300,
+            "t": -2901.2,
+            "b": -2743.7,
+            "w": 280,
+            "h": 157.5
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 1,
+          "title": "Hotel",
+          "media": {
+            "l": 20,
+            "r": 300,
+            "t": -2556.8,
+            "b": -2399.3,
+            "w": 280,
+            "h": 157.5
+          },
+          "img": {
+            "src": "images/projects/hotel-ikorodu-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 2,
+          "title": "Three-Bedroom Duplex",
+          "media": {
+            "l": 20,
+            "r": 300,
+            "t": -2257.9,
+            "b": -2079.6,
+            "w": 280,
+            "h": 178.3
+          },
+          "img": {
+            "src": "images/projects/three-bedroom-duplex-ibadan-01.jpg",
+            "nw": 1600,
+            "nh": 1019,
+            "fit": "cover"
+          },
+          "placeholder": false
+        }
+      ],
+      "gallery": [],
+      "brokenImages": [],
+      "unloadedImages": [
+        "images/projects/hotel-ikorodu-02.jpg",
+        "images/projects/three-bedroom-duplex-ibadan-02.jpg"
+      ],
+      "title": "Crystalline Architects — Architecture, Design & Building"
+    },
+    {
+      "width": 320,
+      "page": "projects.html",
+      "vw": 320,
+      "sw": 320,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [
+        {
+          "i": 0,
+          "title": "Mixed-Use Development",
+          "media": {
+            "l": 20,
+            "r": 300,
+            "t": -1706.1,
+            "b": -1548.6,
+            "w": 280,
+            "h": 157.5
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 1,
+          "title": "Hotel",
+          "media": {
+            "l": 20,
+            "r": 300,
+            "t": -1361.8,
+            "b": -1204.3,
+            "w": 280,
+            "h": 157.5
+          },
+          "img": {
+            "src": "images/projects/hotel-ikorodu-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 2,
+          "title": "Three-Bedroom Duplex",
+          "media": {
+            "l": 20,
+            "r": 300,
+            "t": -1062.8,
+            "b": -884.5,
+            "w": 280,
+            "h": 178.3
+          },
+          "img": {
+            "src": "images/projects/three-bedroom-duplex-ibadan-01.jpg",
+            "nw": 1600,
+            "nh": 1019,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 3,
+          "title": "Five-Bedroom Duplex with Two-Bedroom Units",
+          "media": {
+            "l": 20,
+            "r": 300,
+            "t": -717.5,
+            "b": -465.9,
+            "w": 280,
+            "h": 251.6
+          },
+          "img": {
+            "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
+            "nw": 1323,
+            "nh": 1189,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 4,
+          "title": "Residential Project",
+          "media": {
+            "l": 20,
+            "r": 300,
+            "t": -273.3,
+            "b": -63.3,
+            "w": 280,
+            "h": 210
+          },
+          "img": null,
+          "placeholder": true
+        }
+      ],
+      "gallery": [],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "Projects — Crystalline Architects"
+    },
+    {
+      "width": 320,
+      "page": "project.html?id=4",
+      "vw": 320,
+      "sw": 320,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [],
+      "gallery": [
+        {
+          "i": 0,
+          "rect": {
+            "l": 20,
+            "r": 300,
+            "t": -1208,
+            "b": -956.4,
+            "w": 280,
+            "h": 251.6
+          },
+          "img": {
+            "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
+            "nw": 1323,
+            "nh": 1189,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 1,
+          "rect": {
+            "l": 20,
+            "r": 300,
+            "t": -940.4,
+            "b": -567.1,
+            "w": 280,
+            "h": 373.3
+          },
+          "img": {
+            "src": "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg",
+            "nw": 756,
+            "nh": 1008,
+            "fit": "cover"
+          },
+          "placeholder": false
+        }
+      ],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "Five-Bedroom Duplex with Two-Bedroom Units — Crystalline Architects"
+    },
+    {
+      "width": 320,
+      "page": "project.html?id=5",
+      "vw": 320,
+      "sw": 320,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [],
+      "gallery": [
+        {
+          "i": 0,
+          "rect": {
+            "l": 20,
+            "r": 300,
+            "t": -1757,
+            "b": -1599.5,
+            "w": 280,
+            "h": 157.5
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 1,
+          "rect": {
+            "l": 20,
+            "r": 300,
+            "t": -1583.5,
+            "b": -1426,
+            "w": 280,
+            "h": 157.5
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-02.jpg",
+            "nw": 0,
+            "nh": 0,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 2,
+          "rect": {
+            "l": 20,
+            "r": 300,
+            "t": -1410,
+            "b": -1252.5,
+            "w": 280,
+            "h": 157.5
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-03.jpg",
+            "nw": 0,
+            "nh": 0,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 3,
+          "rect": {
+            "l": 20,
+            "r": 300,
+            "t": -1236.5,
+            "b": -1008.7,
+            "w": 280,
+            "h": 227.9
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-04.jpg",
+            "nw": 1155,
+            "nh": 940,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 4,
+          "rect": {
+            "l": 20,
+            "r": 300,
+            "t": -992.7,
+            "b": -835.2,
+            "w": 280,
+            "h": 157.5
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-05.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 5,
+          "rect": {
+            "l": 20,
+            "r": 300,
+            "t": -819.2,
+            "b": -592.7,
+            "w": 280,
+            "h": 226.5
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-06.jpg",
+            "nw": 1162,
+            "nh": 940,
+            "fit": "cover"
+          },
+          "placeholder": false
+        }
+      ],
+      "brokenImages": [],
+      "unloadedImages": [
+        "images/projects/mixed-use-development-ikeja-01.jpg",
+        "images/projects/mixed-use-development-ikeja-02.jpg",
+        "images/projects/mixed-use-development-ikeja-03.jpg"
+      ],
+      "title": "Mixed-Use Development — Crystalline Architects"
+    },
+    {
+      "width": 320,
+      "page": "about.html",
+      "vw": 320,
+      "sw": 320,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [],
+      "gallery": [],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "About — Crystalline Architects"
+    },
+    {
+      "width": 320,
+      "page": "contact.html",
+      "vw": 320,
+      "sw": 320,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [],
+      "gallery": [],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "Contact — Crystalline Architects"
+    },
+    {
+      "width": 375,
+      "page": "index.html",
+      "vw": 375,
+      "sw": 375,
+      "bodyOverflowX": "clip",
+      "h2": {
+        "l": 20,
+        "r": 352.1,
+        "t": -3969.8,
+        "b": -3860.9,
+        "w": 332.1,
+        "h": 108.9,
+        "scrollWidth": 332,
+        "clientWidth": 332,
+        "parent": {
+          "l": 20,
+          "r": 355,
+          "t": -4025,
+          "b": -3860.9,
+          "w": 335,
+          "h": 164.1
+        },
+        "section": {
+          "l": 0,
+          "r": 375,
+          "t": -4105,
+          "b": -3296.2,
+          "w": 375,
+          "h": 808.8
+        }
+      },
+      "cards": [
+        {
+          "i": 0,
+          "title": "Mixed-Use Development",
+          "media": {
+            "l": 20,
+            "r": 355,
+            "t": -2855.4,
+            "b": -2666.9,
+            "w": 335,
+            "h": 188.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 1,
+          "title": "Hotel",
+          "media": {
+            "l": 20,
+            "r": 355,
+            "t": -2491.1,
+            "b": -2302.7,
+            "w": 335,
+            "h": 188.4
+          },
+          "img": {
+            "src": "images/projects/hotel-ikorodu-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 2,
+          "title": "Three-Bedroom Duplex",
+          "media": {
+            "l": 20,
+            "r": 355,
+            "t": -2161.3,
+            "b": -1947.9,
+            "w": 335,
+            "h": 213.3
+          },
+          "img": {
+            "src": "images/projects/three-bedroom-duplex-ibadan-01.jpg",
+            "nw": 1600,
+            "nh": 1019,
+            "fit": "cover"
+          },
+          "placeholder": false
+        }
+      ],
+      "gallery": [],
+      "brokenImages": [],
+      "unloadedImages": [
+        "images/projects/hotel-ikorodu-02.jpg",
+        "images/projects/three-bedroom-duplex-ibadan-02.jpg"
+      ],
+      "title": "Crystalline Architects — Architecture, Design & Building"
+    },
+    {
+      "width": 375,
+      "page": "projects.html",
+      "vw": 375,
+      "sw": 375,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [
+        {
+          "i": 0,
+          "title": "Mixed-Use Development",
+          "media": {
+            "l": 20,
+            "r": 355,
+            "t": -1801.2,
+            "b": -1612.8,
+            "w": 335,
+            "h": 188.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 1,
+          "title": "Hotel",
+          "media": {
+            "l": 20,
+            "r": 355,
+            "t": -1437,
+            "b": -1248.5,
+            "w": 335,
+            "h": 188.4
+          },
+          "img": {
+            "src": "images/projects/hotel-ikorodu-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 2,
+          "title": "Three-Bedroom Duplex",
+          "media": {
+            "l": 20,
+            "r": 355,
+            "t": -1107.1,
+            "b": -893.8,
+            "w": 335,
+            "h": 213.3
+          },
+          "img": {
+            "src": "images/projects/three-bedroom-duplex-ibadan-01.jpg",
+            "nw": 1600,
+            "nh": 1019,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 3,
+          "title": "Five-Bedroom Duplex with Two-Bedroom Units",
+          "media": {
+            "l": 20,
+            "r": 355,
+            "t": -752.3,
+            "b": -451.3,
+            "w": 335,
+            "h": 301.1
+          },
+          "img": {
+            "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
+            "nw": 1323,
+            "nh": 1189,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 4,
+          "title": "Residential Project",
+          "media": {
+            "l": 20,
+            "r": 355,
+            "t": -284.3,
+            "b": -33,
+            "w": 335,
+            "h": 251.3
+          },
+          "img": null,
+          "placeholder": true
+        }
+      ],
+      "gallery": [],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "Projects — Crystalline Architects"
+    },
+    {
+      "width": 375,
+      "page": "project.html?id=4",
+      "vw": 375,
+      "sw": 375,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [],
+      "gallery": [
+        {
+          "i": 0,
+          "rect": {
+            "l": 20,
+            "r": 355,
+            "t": -1269,
+            "b": -968,
+            "w": 335,
+            "h": 301.1
+          },
+          "img": {
+            "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
+            "nw": 1323,
+            "nh": 1189,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 1,
+          "rect": {
+            "l": 20,
+            "r": 355,
+            "t": -952,
+            "b": -505.3,
+            "w": 335,
+            "h": 446.7
+          },
+          "img": {
+            "src": "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg",
+            "nw": 756,
+            "nh": 1008,
+            "fit": "cover"
+          },
+          "placeholder": false
+        }
+      ],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "Five-Bedroom Duplex with Two-Bedroom Units — Crystalline Architects"
+    },
+    {
+      "width": 375,
+      "page": "project.html?id=5",
+      "vw": 375,
+      "sw": 375,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [],
+      "gallery": [
+        {
+          "i": 0,
+          "rect": {
+            "l": 20,
+            "r": 355,
+            "t": -1879,
+            "b": -1690.6,
+            "w": 335,
+            "h": 188.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 1,
+          "rect": {
+            "l": 20,
+            "r": 355,
+            "t": -1674.6,
+            "b": -1486.2,
+            "w": 335,
+            "h": 188.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-02.jpg",
+            "nw": 0,
+            "nh": 0,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 2,
+          "rect": {
+            "l": 20,
+            "r": 355,
+            "t": -1470.2,
+            "b": -1281.7,
+            "w": 335,
+            "h": 188.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-03.jpg",
+            "nw": 0,
+            "nh": 0,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 3,
+          "rect": {
+            "l": 20,
+            "r": 355,
+            "t": -1265.7,
+            "b": -993.1,
+            "w": 335,
+            "h": 272.6
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-04.jpg",
+            "nw": 1155,
+            "nh": 940,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 4,
+          "rect": {
+            "l": 20,
+            "r": 355,
+            "t": -977.1,
+            "b": -788.6,
+            "w": 335,
+            "h": 188.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-05.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 5,
+          "rect": {
+            "l": 20,
+            "r": 355,
+            "t": -772.6,
+            "b": -501.7,
+            "w": 335,
+            "h": 271
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-06.jpg",
+            "nw": 1162,
+            "nh": 940,
+            "fit": "cover"
+          },
+          "placeholder": false
+        }
+      ],
+      "brokenImages": [],
+      "unloadedImages": [
+        "images/projects/mixed-use-development-ikeja-01.jpg",
+        "images/projects/mixed-use-development-ikeja-02.jpg",
+        "images/projects/mixed-use-development-ikeja-03.jpg"
+      ],
+      "title": "Mixed-Use Development — Crystalline Architects"
+    },
+    {
+      "width": 375,
+      "page": "about.html",
+      "vw": 375,
+      "sw": 375,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [],
+      "gallery": [],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "About — Crystalline Architects"
+    },
+    {
+      "width": 375,
+      "page": "contact.html",
+      "vw": 375,
+      "sw": 375,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [],
+      "gallery": [],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "Contact — Crystalline Architects"
+    },
+    {
+      "width": 430,
+      "page": "index.html",
+      "vw": 430,
+      "sw": 430,
+      "bodyOverflowX": "clip",
+      "h2": {
+        "l": 20,
+        "r": 400.8,
+        "t": -3920.8,
+        "b": -3795,
+        "w": 380.8,
+        "h": 125.8,
+        "scrollWidth": 381,
+        "clientWidth": 381,
+        "parent": {
+          "l": 20,
+          "r": 410,
+          "t": -3976,
+          "b": -3795,
+          "w": 390,
+          "h": 181
+        },
+        "section": {
+          "l": 0,
+          "r": 430,
+          "t": -4056,
+          "b": -3284.1,
+          "w": 430,
+          "h": 771.9
+        }
+      },
+      "cards": [
+        {
+          "i": 0,
+          "title": "Mixed-Use Development",
+          "media": {
+            "l": 20,
+            "r": 410,
+            "t": -2904.7,
+            "b": -2685.3,
+            "w": 390,
+            "h": 219.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 1,
+          "title": "Hotel",
+          "media": {
+            "l": 20,
+            "r": 410,
+            "t": -2500.7,
+            "b": -2281.3,
+            "w": 390,
+            "h": 219.4
+          },
+          "img": {
+            "src": "images/projects/hotel-ikorodu-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 2,
+          "title": "Three-Bedroom Duplex",
+          "media": {
+            "l": 20,
+            "r": 410,
+            "t": -2139.9,
+            "b": -1891.5,
+            "w": 390,
+            "h": 248.4
+          },
+          "img": {
+            "src": "images/projects/three-bedroom-duplex-ibadan-01.jpg",
+            "nw": 1600,
+            "nh": 1019,
+            "fit": "cover"
+          },
+          "placeholder": false
+        }
+      ],
+      "gallery": [],
+      "brokenImages": [],
+      "unloadedImages": [
+        "images/projects/hotel-ikorodu-02.jpg",
+        "images/projects/three-bedroom-duplex-ibadan-02.jpg"
+      ],
+      "title": "Crystalline Architects — Architecture, Design & Building"
+    },
+    {
+      "width": 430,
+      "page": "projects.html",
+      "vw": 430,
+      "sw": 430,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [
+        {
+          "i": 0,
+          "title": "Mixed-Use Development",
+          "media": {
+            "l": 20,
+            "r": 410,
+            "t": -2003.4,
+            "b": -1784,
+            "w": 390,
+            "h": 219.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 1,
+          "title": "Hotel",
+          "media": {
+            "l": 20,
+            "r": 410,
+            "t": -1599.4,
+            "b": -1380,
+            "w": 390,
+            "h": 219.4
+          },
+          "img": {
+            "src": "images/projects/hotel-ikorodu-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 2,
+          "title": "Three-Bedroom Duplex",
+          "media": {
+            "l": 20,
+            "r": 410,
+            "t": -1238.6,
+            "b": -990.2,
+            "w": 390,
+            "h": 248.4
+          },
+          "img": {
+            "src": "images/projects/three-bedroom-duplex-ibadan-01.jpg",
+            "nw": 1600,
+            "nh": 1019,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 3,
+          "title": "Five-Bedroom Duplex with Two-Bedroom Units",
+          "media": {
+            "l": 20,
+            "r": 410,
+            "t": -848.8,
+            "b": -498.3,
+            "w": 390,
+            "h": 350.5
+          },
+          "img": {
+            "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
+            "nw": 1323,
+            "nh": 1189,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 4,
+          "title": "Residential Project",
+          "media": {
+            "l": 20,
+            "r": 410,
+            "t": -331.3,
+            "b": -38.8,
+            "w": 390,
+            "h": 292.5
+          },
+          "img": null,
+          "placeholder": true
+        }
+      ],
+      "gallery": [],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "Projects — Crystalline Architects"
+    },
+    {
+      "width": 430,
+      "page": "project.html?id=4",
+      "vw": 430,
+      "sw": 430,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [],
+      "gallery": [
+        {
+          "i": 0,
+          "rect": {
+            "l": 20,
+            "r": 410,
+            "t": -1368,
+            "b": -1017.5,
+            "w": 390,
+            "h": 350.5
+          },
+          "img": {
+            "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
+            "nw": 1323,
+            "nh": 1189,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 1,
+          "rect": {
+            "l": 20,
+            "r": 410,
+            "t": -1001.5,
+            "b": -481.5,
+            "w": 390,
+            "h": 520
+          },
+          "img": {
+            "src": "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg",
+            "nw": 756,
+            "nh": 1008,
+            "fit": "cover"
+          },
+          "placeholder": false
+        }
+      ],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "Five-Bedroom Duplex with Two-Bedroom Units — Crystalline Architects"
+    },
+    {
+      "width": 430,
+      "page": "project.html?id=5",
+      "vw": 430,
+      "sw": 430,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [],
+      "gallery": [
+        {
+          "i": 0,
+          "rect": {
+            "l": 20,
+            "r": 410,
+            "t": -2098,
+            "b": -1878.7,
+            "w": 390,
+            "h": 219.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-01.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 1,
+          "rect": {
+            "l": 20,
+            "r": 410,
+            "t": -1862.7,
+            "b": -1643.3,
+            "w": 390,
+            "h": 219.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-02.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 2,
+          "rect": {
+            "l": 20,
+            "r": 410,
+            "t": -1627.3,
+            "b": -1407.9,
+            "w": 390,
+            "h": 219.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-03.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 3,
+          "rect": {
+            "l": 20,
+            "r": 410,
+            "t": -1391.9,
+            "b": -1074.5,
+            "w": 390,
+            "h": 317.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-04.jpg",
+            "nw": 1155,
+            "nh": 940,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 4,
+          "rect": {
+            "l": 20,
+            "r": 410,
+            "t": -1058.5,
+            "b": -839.1,
+            "w": 390,
+            "h": 219.4
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-05.jpg",
+            "nw": 1600,
+            "nh": 900,
+            "fit": "cover"
+          },
+          "placeholder": false
+        },
+        {
+          "i": 5,
+          "rect": {
+            "l": 20,
+            "r": 410,
+            "t": -823.1,
+            "b": -507.7,
+            "w": 390,
+            "h": 315.5
+          },
+          "img": {
+            "src": "images/projects/mixed-use-development-ikeja-06.jpg",
+            "nw": 1162,
+            "nh": 940,
+            "fit": "cover"
+          },
+          "placeholder": false
+        }
+      ],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "Mixed-Use Development — Crystalline Architects"
+    },
+    {
+      "width": 430,
+      "page": "about.html",
+      "vw": 430,
+      "sw": 430,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [],
+      "gallery": [],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "About — Crystalline Architects"
+    },
+    {
+      "width": 430,
+      "page": "contact.html",
+      "vw": 430,
+      "sw": 430,
+      "bodyOverflowX": "clip",
+      "h2": null,
+      "cards": [],
+      "gallery": [],
+      "brokenImages": [],
+      "unloadedImages": [],
+      "title": "Contact — Crystalline Architects"
+    }
+  ],
+  "consoleErrors": [],
+  "failedRequests": []
+}

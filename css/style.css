@@ -888,7 +888,12 @@ p {
 }
 
 .home-intro-copy {
+  min-width: 0;
   padding-bottom: 0.4rem;
+}
+
+.home-intro-lead {
+  min-width: 0;
 }
 
 .home-intro-copy .intro-large {
@@ -2857,7 +2862,7 @@ p {
   .project-card--feature .project-media,
   .project-card--offset-a .project-media,
   .project-card--offset-b .project-media {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: var(--media-ratio, 4 / 3);
   }
 
   .project-gallery {
@@ -2996,7 +3001,10 @@ p {
     font-size: clamp(2.6rem, 12vw, 4.5rem);
   }
 
-  .home-intro-lead h2,
+  .home-intro-lead h2 {
+    font-size: clamp(2.1rem, 11vw, 5rem);
+  }
+
   .home-contact h2 {
     font-size: clamp(2.8rem, 13vw, 5rem);
   }
