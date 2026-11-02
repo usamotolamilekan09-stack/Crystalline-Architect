@@ -15,9 +15,35 @@ function getProjectImages(project) {
 }
 
 function getProjectImageDimensions(image) {
+  if (typeof getContentImageDimensions === 'function') {
+    return getContentImageDimensions(image);
+  }
+
   return typeof projectImageDimensions !== 'undefined'
     ? projectImageDimensions[image]
     : null;
+}
+
+function getProjectGalleryItems(project) {
+  if (Array.isArray(project.galleryImages) && project.galleryImages.length) {
+    return project.galleryImages
+      .filter(image => image && image.src)
+      .map((image, index) => ({
+        src: image.src,
+        srcset: image.srcset || '',
+        alt: image.alt || `${project.title} — view ${index + 1}`,
+        width: image.width || null,
+        height: image.height || null
+      }));
+  }
+
+  return getProjectImages(project).map((src, index) => ({
+    src,
+    srcset: '',
+    alt: `${project.title} — view ${index + 1}`,
+    width: null,
+    height: null
+  }));
 }
 
 function renderProjectFacts(project) {
@@ -45,21 +71,26 @@ function renderProjectFacts(project) {
 }
 
 function renderProjectGallery(project) {
-  const images = getProjectImages(project);
+  const images = getProjectGalleryItems(project);
 
   if (images.length) {
     return images.map((image, index) => {
-      const dimensions = getProjectImageDimensions(image);
+      const dimensions = image.width && image.height
+        ? { width: image.width, height: image.height }
+        : getProjectImageDimensions(image.src);
       const sizeAttributes = dimensions
         ? ` width="${dimensions.width}" height="${dimensions.height}"`
         : '';
       const ratioStyle = dimensions
         ? ` style="--media-ratio: ${dimensions.width} / ${dimensions.height}"`
         : '';
+      const srcset = image.srcset
+        ? ` srcset="${escapeHtmlProject(image.srcset)}" sizes="(max-width: 900px) 100vw, 50vw"`
+        : '';
 
       return `
         <figure class="project-gallery-item"${ratioStyle} data-reveal>
-          <img src="${escapeHtmlProject(image)}" alt="${escapeHtmlProject(project.title)} — view ${index + 1}"${sizeAttributes} loading="lazy" decoding="async">
+          <img src="${escapeHtmlProject(image.src)}" alt="${escapeHtmlProject(image.alt)}"${srcset}${sizeAttributes} loading="lazy" decoding="async">
         </figure>
       `;
     }).join('');
@@ -78,8 +109,11 @@ function renderProjectHero(project, category) {
   const sizeAttributes = dimensions
     ? ` width="${dimensions.width}" height="${dimensions.height}"`
     : '';
+  const srcset = project.coverImageSrcset
+    ? ` srcset="${escapeHtmlProject(project.coverImageSrcset)}" sizes="100vw"`
+    : '';
   const media = cover
-    ? `<img src="${escapeHtmlProject(cover)}" alt="${escapeHtmlProject(project.coverImageAlt || project.title)}"${sizeAttributes} fetchpriority="high" decoding="async">`
+    ? `<img src="${escapeHtmlProject(cover)}" alt="${escapeHtmlProject(project.coverImageAlt || project.title)}"${srcset}${sizeAttributes} fetchpriority="high" decoding="async">`
     : renderProjectPlaceholder(0);
   const status = project.status ? ` / ${escapeHtmlProject(project.status)}` : '';
 
@@ -142,18 +176,33 @@ function renderProjectError(container, title, text) {
   `;
 }
 
-function renderProjectDetail() {
+async function renderProjectDetail() {
   const container = document.getElementById('projectDetail');
   if (!container) return;
 
-  if (typeof projects === 'undefined' || !Array.isArray(projects) || !projects.length) {
+  let projectList = [];
+
+  if (typeof loadContent === 'function') {
+    try {
+      const content = await loadContent();
+      projectList = content && Array.isArray(content.projects) ? content.projects : [];
+    } catch (error) {
+      console.warn('Project content could not be loaded. Using local fallback data.', error);
+    }
+  }
+
+  if (!projectList.length && typeof projects !== 'undefined' && Array.isArray(projects)) {
+    projectList = projects;
+  }
+
+  if (!projectList.length) {
     renderProjectError(container, 'Project data unavailable', 'Project information is not available at the moment.');
     return;
   }
 
   const urlParams = new URLSearchParams(window.location.search);
   const identifier = urlParams.get('id') || urlParams.get('project');
-  const project = projects.find(item => String(item.id) === identifier || item.slug === identifier);
+  const project = projectList.find(item => String(item.id) === identifier || item.slug === identifier);
 
   if (!project) {
     renderProjectError(container, 'Project not found', 'The project you are looking for does not exist or is no longer available.');
@@ -162,15 +211,18 @@ function renderProjectDetail() {
 
   const category = getProjectDisplayCategory(project);
   const images = getProjectImages(project);
-  const galleryNote = images.length
+  const galleryNoteText = project.galleryNote || (images.length
     ? ''
-    : '<p class="project-gallery-note">Project imagery will be published once the client confirms the correct images.</p>';
+    : 'Project imagery will be published once the client confirms the correct images.');
+  const galleryNote = galleryNoteText
+    ? `<p class="project-gallery-note">${escapeHtmlProject(galleryNoteText)}</p>`
+    : '';
 
-  document.title = `${project.title} — Crystalline Architects`;
+  document.title = project.seoTitle || `${project.title} — Crystalline Architects`;
 
   const description = document.querySelector('meta[name="description"]');
   if (description) {
-    description.setAttribute('content', project.shortDescription || project.description || 'Project by Crystalline Architects.');
+    description.setAttribute('content', project.seoDescription || project.shortDescription || project.description || 'Project by Crystalline Architects.');
   }
 
   container.innerHTML = `

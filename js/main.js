@@ -1,6 +1,59 @@
+let activeProjects = [];
+let activeCategories = [];
+let activeDimensions = {};
+let contentPromise = null;
+
+function getLocalProjects() {
+  return typeof projects !== 'undefined' && Array.isArray(projects) ? projects : [];
+}
+
+function getLocalDimensions() {
+  return typeof projectImageDimensions !== 'undefined' ? projectImageDimensions : {};
+}
+
 function getOrderedProjects() {
-  if (typeof projects === 'undefined' || !Array.isArray(projects)) return [];
-  return [...projects].sort((a, b) => (a.order || 99) - (b.order || 99));
+  const source = activeProjects.length ? activeProjects : getLocalProjects();
+  return [...source].sort((a, b) => (a.order || 99) - (b.order || 99));
+}
+
+function setActiveContent(result) {
+  activeProjects = result && Array.isArray(result.projects) ? result.projects : [];
+  activeCategories = result && Array.isArray(result.categories) ? result.categories : [];
+  activeDimensions = {
+    ...getLocalDimensions(),
+    ...(result && result.dimensions ? result.dimensions : {})
+  };
+}
+
+function loadContent() {
+  if (contentPromise) return contentPromise;
+
+  contentPromise = (async () => {
+    if (window.CrystallineContent && typeof window.CrystallineContent.load === 'function') {
+      try {
+        const result = await window.CrystallineContent.load();
+        setActiveContent(result);
+        return result;
+      } catch (error) {
+        console.warn('Sanity content could not be loaded. Using local fallback data.', error);
+      }
+    }
+
+    const fallback = {
+      projects: getLocalProjects(),
+      categories: [],
+      dimensions: getLocalDimensions(),
+      source: 'fallback'
+    };
+    setActiveContent(fallback);
+    return fallback;
+  })();
+
+  return contentPromise;
+}
+
+function getContentImageDimensions(image) {
+  return activeDimensions[image] || getLocalDimensions()[image] || null;
 }
 
 function padProjectIndex(index) {
@@ -38,18 +91,19 @@ function renderProjectMedia(project, index, options = {}) {
     : '';
   const loading = options.eager ? 'eager' : 'lazy';
   const priority = options.eager ? ' fetchpriority="high"' : '';
-  const dimensions = typeof projectImageDimensions !== 'undefined'
-    ? projectImageDimensions[cover]
-    : null;
+  const dimensions = getContentImageDimensions(cover);
   const sizeAttributes = dimensions
     ? ` width="${dimensions.width}" height="${dimensions.height}"`
     : '';
   const ratioStyle = dimensions
     ? ` style="--media-ratio: ${dimensions.width} / ${dimensions.height}"`
     : '';
+  const srcset = project.coverImageSrcset
+    ? ` srcset="${escapeHtml(project.coverImageSrcset)}" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"`
+    : '';
 
   const media = cover
-    ? `<img src="${escapeHtml(cover)}" alt="${escapeHtml(project.coverImageAlt || project.title)}"${sizeAttributes} loading="${loading}"${priority} decoding="async">`
+    ? `<img src="${escapeHtml(cover)}" alt="${escapeHtml(project.coverImageAlt || project.title)}"${srcset}${sizeAttributes} loading="${loading}"${priority} decoding="async">`
     : renderProjectPlaceholder(index);
 
   const view = cover
@@ -144,6 +198,27 @@ function renderAllProjects(filterCategory = 'all') {
     .join('');
 
   refreshMotion();
+}
+
+function renderProjectFilters(categories) {
+  const container = document.querySelector('.filters');
+  if (!container || !categories.length) return;
+
+  const seen = new Set();
+  const items = [{ title: 'All', value: 'all' }];
+
+  categories.forEach(category => {
+    const title = category && category.title;
+    if (!title || seen.has(title)) return;
+    seen.add(title);
+    items.push({ title, value: title });
+  });
+
+  container.innerHTML = items
+    .map((item, index) => `
+      <button type="button" class="filter-btn${index === 0 ? ' active' : ''}" data-filter="${escapeHtml(item.value)}" aria-pressed="${index === 0 ? 'true' : 'false'}">${escapeHtml(item.title)}</button>
+    `)
+    .join('');
 }
 
 function initProjectFilters() {
@@ -292,7 +367,7 @@ function initNavScroll() {
   window.addEventListener('scroll', update, { passive: true });
 }
 
-function init() {
+async function init() {
   initMobileNav();
   initNavScroll();
   setActiveNavLink();
@@ -300,8 +375,11 @@ function init() {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
   if (currentPage === 'index.html' || currentPage === '') {
+    await loadContent();
     renderFeaturedProjects();
   } else if (currentPage === 'projects.html') {
+    await loadContent();
+    renderProjectFilters(activeCategories);
     renderAllProjects('all');
     initProjectFilters();
   }
