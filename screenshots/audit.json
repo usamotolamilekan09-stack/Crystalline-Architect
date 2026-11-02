@@ -113,8 +113,8 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -1632.1,
-            "b": -1474.6,
+            "t": -1674.1,
+            "b": -1516.6,
             "w": 280,
             "h": 157.5
           },
@@ -132,8 +132,8 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -1287.8,
-            "b": -1130.3,
+            "t": -1329.8,
+            "b": -1172.3,
             "w": 280,
             "h": 157.5
           },
@@ -151,8 +151,8 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -988.8,
-            "b": -810.5,
+            "t": -1030.8,
+            "b": -852.5,
             "w": 280,
             "h": 178.3
           },
@@ -170,15 +170,15 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -643.5,
-            "b": -465.6,
+            "t": -685.5,
+            "b": -433.9,
             "w": 280,
-            "h": 177.9
+            "h": 251.6
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-            "nw": 1481,
-            "nh": 941,
+            "nw": 1323,
+            "nh": 1189,
             "fit": "cover"
           },
           "placeholder": false
@@ -189,13 +189,18 @@
           "media": {
             "l": 20,
             "r": 300,
-            "t": -273,
-            "b": -63,
+            "t": -241.3,
+            "b": -63.4,
             "w": 280,
-            "h": 210
+            "h": 177.9
           },
-          "img": null,
-          "placeholder": true
+          "img": {
+            "src": "images/projects/residential-project-01.jpg",
+            "nw": 1481,
+            "nh": 941,
+            "fit": "cover"
+          },
+          "placeholder": false
         }
       ],
       "gallery": [],
@@ -217,15 +222,15 @@
           "rect": {
             "l": 20,
             "r": 300,
-            "t": -952,
-            "b": -774.1,
+            "t": -1208,
+            "b": -956.4,
             "w": 280,
-            "h": 177.9
+            "h": 251.6
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-            "nw": 1481,
-            "nh": 941,
+            "nw": 1323,
+            "nh": 1189,
             "fit": "cover"
           },
           "placeholder": false
@@ -235,15 +240,15 @@
           "rect": {
             "l": 20,
             "r": 300,
-            "t": -758.1,
-            "b": -567.3,
+            "t": -940.4,
+            "b": -567.1,
             "w": 280,
-            "h": 190.8
+            "h": 373.3
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg",
-            "nw": 1381,
-            "nh": 941,
+            "nw": 756,
+            "nh": 1008,
             "fit": "cover"
           },
           "placeholder": false
@@ -518,8 +523,8 @@
           "media": {
             "l": 20,
             "r": 355,
-            "t": -1712.2,
-            "b": -1523.8,
+            "t": -1762.2,
+            "b": -1573.8,
             "w": 335,
             "h": 188.4
           },
@@ -537,8 +542,8 @@
           "media": {
             "l": 20,
             "r": 355,
-            "t": -1348,
-            "b": -1159.5,
+            "t": -1398,
+            "b": -1209.5,
             "w": 335,
             "h": 188.4
           },
@@ -556,8 +561,8 @@
           "media": {
             "l": 20,
             "r": 355,
-            "t": -1018.1,
-            "b": -804.8,
+            "t": -1068.1,
+            "b": -854.8,
             "w": 335,
             "h": 213.3
           },
@@ -575,15 +580,15 @@
           "media": {
             "l": 20,
             "r": 355,
-            "t": -663.3,
-            "b": -450.5,
+            "t": -713.3,
+            "b": -412.3,
             "w": 335,
-            "h": 212.8
+            "h": 301.1
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-            "nw": 1481,
-            "nh": 941,
+            "nw": 1323,
+            "nh": 1189,
             "fit": "cover"
           },
           "placeholder": false
@@ -594,13 +599,18 @@
           "media": {
             "l": 20,
             "r": 355,
-            "t": -283.5,
-            "b": -32.2,
+            "t": -245.3,
+            "b": -32.4,
             "w": 335,
-            "h": 251.3
+            "h": 212.8
           },
-          "img": null,
-          "placeholder": true
+          "img": {
+            "src": "images/projects/residential-project-01.jpg",
+            "nw": 1481,
+            "nh": 941,
+            "fit": "cover"
+          },
+          "placeholder": false
         }
       ],
       "gallery": [],
@@ -622,15 +632,15 @@
           "rect": {
             "l": 20,
             "r": 355,
-            "t": -963,
-            "b": -750.2,
+            "t": -1269,
+            "b": -968,
             "w": 335,
-            "h": 212.8
+            "h": 301.1
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-            "nw": 1481,
-            "nh": 941,
+            "nw": 1323,
+            "nh": 1189,
             "fit": "cover"
           },
           "placeholder": false
@@ -640,15 +650,15 @@
           "rect": {
             "l": 20,
             "r": 355,
-            "t": -734.2,
-            "b": -505.9,
+            "t": -952,
+            "b": -505.3,
             "w": 335,
-            "h": 228.3
+            "h": 446.7
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg",
-            "nw": 1381,
-            "nh": 941,
+            "nw": 756,
+            "nh": 1008,
             "fit": "cover"
           },
           "placeholder": false
@@ -923,8 +933,8 @@
           "media": {
             "l": 20,
             "r": 410,
-            "t": -1900.4,
-            "b": -1681,
+            "t": -1958.4,
+            "b": -1739,
             "w": 390,
             "h": 219.4
           },
@@ -942,8 +952,8 @@
           "media": {
             "l": 20,
             "r": 410,
-            "t": -1496.4,
-            "b": -1277,
+            "t": -1554.4,
+            "b": -1335,
             "w": 390,
             "h": 219.4
           },
@@ -961,8 +971,8 @@
           "media": {
             "l": 20,
             "r": 410,
-            "t": -1135.6,
-            "b": -887.2,
+            "t": -1193.6,
+            "b": -945.2,
             "w": 390,
             "h": 248.4
           },
@@ -980,15 +990,15 @@
           "media": {
             "l": 20,
             "r": 410,
-            "t": -745.8,
-            "b": -498,
+            "t": -803.8,
+            "b": -453.3,
             "w": 390,
-            "h": 247.8
+            "h": 350.5
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-            "nw": 1481,
-            "nh": 941,
+            "nw": 1323,
+            "nh": 1189,
             "fit": "cover"
           },
           "placeholder": false
@@ -999,13 +1009,18 @@
           "media": {
             "l": 20,
             "r": 410,
-            "t": -331,
+            "t": -286.3,
             "b": -38.5,
             "w": 390,
-            "h": 292.5
+            "h": 247.8
           },
-          "img": null,
-          "placeholder": true
+          "img": {
+            "src": "images/projects/residential-project-01.jpg",
+            "nw": 1481,
+            "nh": 941,
+            "fit": "cover"
+          },
+          "placeholder": false
         }
       ],
       "gallery": [],
@@ -1027,15 +1042,15 @@
           "rect": {
             "l": 20,
             "r": 410,
-            "t": -1011,
-            "b": -763.2,
+            "t": -1368,
+            "b": -1017.5,
             "w": 390,
-            "h": 247.8
+            "h": 350.5
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg",
-            "nw": 1481,
-            "nh": 941,
+            "nw": 1323,
+            "nh": 1189,
             "fit": "cover"
           },
           "placeholder": false
@@ -1045,15 +1060,15 @@
           "rect": {
             "l": 20,
             "r": 410,
-            "t": -747.2,
+            "t": -1001.5,
             "b": -481.5,
             "w": 390,
-            "h": 265.7
+            "h": 520
           },
           "img": {
             "src": "images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg",
-            "nw": 1381,
-            "nh": 941,
+            "nw": 756,
+            "nh": 1008,
             "fit": "cover"
           },
           "placeholder": false

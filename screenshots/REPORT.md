@@ -4,6 +4,11 @@ Date: 2026-11-01
 
 ## Changes
 
+- Replaced the Approach section placeholder in `about.html` with a graded architectural workstation photograph.
+  - Generated `images/approach-workstation.jpg` at 1600×2000 (4:5) from a licensed Pexels photograph.
+  - Cropped to focus on the monitor, keyboard and mouse; no people are shown.
+  - Added warm, charcoal-neutral grading and `object-fit: cover` so it fills the existing container without distortion.
+- Added a favicon generated from the geometric logo in `images/favicon/` and linked it in all five HTML pages.
 - Fixed the 320px cream-section heading overflow in `css/style.css`.
   - `.home-intro-lead` is now allowed to shrink (`min-width: 0`).
   - At `max-width: 560px`, the intro heading now uses `clamp(2.1rem, 11vw, 5rem)`.
@@ -11,11 +16,11 @@ Date: 2026-11-01
 - Added per-image aspect ratios to project cards.
   - `js/main.js` now adds `--media-ratio` from `projectImageDimensions`.
   - At `max-width: 780px`, project-card media uses `aspect-ratio: var(--media-ratio, 4 / 3)` instead of forcing `4 / 3` cropping.
-- Added the two exterior images for `Five-Bedroom Duplex with Two-Bedroom Units` (`id: 4`).
-  - `Fifth design.jpeg` → `images/projects/five-bedroom-duplex-two-bedroom-units-01.jpg` (1481×941)
-  - `Fifth design ii.jpeg` → `images/projects/five-bedroom-duplex-two-bedroom-units-02.jpg` (1381×941)
-  - Updated `js/data.js` cover, gallery, and dimensions.
-  - Both images classify strongly as modern duplex exterior renders and are highly similar to each other.
+- Added the requested two-image sets by project order.
+  - Project 4, `Five-Bedroom Duplex with Two-Bedroom Units` (`id: 4`): `Fourth design iv.jpeg` and `Fourth design v.jpeg`.
+  - Project 5, `Residential Project` (`id: 3`): `Fifth design.jpeg` and `Fifth design ii.jpeg`.
+  - Generated `five-bedroom-duplex-two-bedroom-units-01/02.jpg` (1323×1189, 756×1008) and `residential-project-01/02.jpg` (1481×941, 1381×941).
+  - Updated `js/data.js` covers, galleries, and dimensions.
 
 ## Verification
 
@@ -24,12 +29,12 @@ Tested at 320, 360, 375, 390, and 430px on `index.html`, `projects.html`, `proje
 - No horizontal page overflow at any tested width.
 - Cream heading fits its grid column at every width; at 320px it ends at 300px.
 - Project cards preserve their natural image ratios on phones; no forced 4:3 crop.
-- Five project cards render in order:
+- All five project cards now have images:
   1. Mixed-Use Development
   2. Hotel
   3. Three-Bedroom Duplex
   4. Five-Bedroom Duplex with Two-Bedroom Units
-  5. Residential Project (placeholder — no source assets supplied)
+  5. Residential Project
 - Hamburger menu:
   - Opens and closes.
   - Updates `aria-expanded`.
@@ -41,9 +46,9 @@ Tested at 320, 360, 375, 390, and 430px on `index.html`, `projects.html`, `proje
 
 ## Image Assignment Note
 
-The `Fifth design` pair was found after the initial Fourth Design pass and is the correct two-image set for project 4: `Fifth design.jpeg` is the cover and `Fifth design ii.jpeg` is the second gallery image. Both are landscape exterior renders, so the mobile cards and gallery stay compact. The earlier `Fourth design iv.jpeg` / `v.jpeg` candidates are not used.
+The design-file numbering follows display order: `Fourth Design` belongs to the fourth project (`Five-Bedroom Duplex with Two-Bedroom Units`), and `Fifth design` belongs to the fifth project (`Residential Project`). Both Fifth design files classify strongly as modern duplex exterior renders.
 
-The fifth visible card, `Residential Project` (`id: 3`), remains a placeholder because no matching source images, PDF pages, floor plans, interiors, or moodboards were found in `images/`.
+`Residential Project` still has `expectedImageCount: 6` because its description references exterior views, floor plans, interior studies, and material moodboards. Only the two Fifth design exterior renders were present, so the gallery currently shows two images; the other four asset types remain unsupplied.
 
 ## Screenshots
 
@@ -54,4 +59,5 @@ The fifth visible card, `Residential Project` (`id: 3`), remains a placeholder b
 - Project 4 detail: `project-4-320-hero.png`, `project-4-375-hero.png`, `project-4-430-hero.png` and matching `-gallery.png` files
 - Project 5 detail: `project-5-320-hero.png`, `project-5-375-hero.png`, `project-5-430-hero.png` and matching `-gallery.png` files
 - Open mobile menu: `nav-open-320.png`
+- Approach section image: `about-approach-1440.png`, `about-approach-390.png`
 - Raw audit data: `audit.json`
