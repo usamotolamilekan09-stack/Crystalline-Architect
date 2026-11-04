@@ -1219,6 +1219,111 @@ p {
   color: var(--muted);
 }
 
+/* HOME PROJECT RAIL */
+.project-rail-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.project-rail-status {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+
+.project-rail-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-rail-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  color: var(--bone);
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background var(--duration) var(--ease),
+    border-color var(--duration) var(--ease),
+    color var(--duration) var(--ease),
+    opacity var(--duration) var(--ease);
+}
+
+.project-rail-btn:hover,
+.project-rail-btn:focus-visible {
+  border-color: var(--brass);
+  background: var(--brass);
+  color: var(--ink);
+}
+
+.project-rail-btn:disabled {
+  opacity: 0.28;
+  cursor: not-allowed;
+}
+
+.project-rail {
+  display: flex;
+  gap: clamp(1rem, 2vw, 2rem);
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  padding-right: max(0px, calc(100% - clamp(15rem, 78vw, 68rem)));
+  padding-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+
+.project-rail::-webkit-scrollbar {
+  display: none;
+}
+
+.project-rail:focus-visible {
+  outline-offset: 8px;
+}
+
+.project-card--slide {
+  flex: 0 0 clamp(15rem, 78vw, 68rem);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.project-card--slide .project-number {
+  display: none;
+}
+
+.project-card--slide .project-media {
+  aspect-ratio: 16 / 10;
+}
+
+.project-card--slide .project-title {
+  font-size: clamp(1.7rem, 3vw, 3.4rem);
+}
+
+.project-card--slide .project-meta {
+  font-size: 0.6rem;
+  color: var(--bone-muted);
+}
+
+.project-card--slide .project-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .media-placeholder {
   position: relative;
   display: grid;
@@ -2870,6 +2975,15 @@ p {
 @media (max-width: 780px) {
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-rail-btn {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .project-card--slide .project-media {
+    aspect-ratio: 4 / 3;
   }
 
   .project-card--feature,

@@ -127,7 +127,7 @@
                 </div>
 
                 <div class="hero-footer">
-                    <a href="#intro" class="hero-scroll">
+                    <a href="#projects" class="hero-scroll">
                         <span class="hero-scroll-line" aria-hidden="true"></span>
                         Scroll to explore
                     </a>
@@ -135,6 +135,51 @@
                 </div>
             </div>
         </section>
+
+        <section class="home-projects" id="projects" aria-labelledby="projects-heading">
+            <div class="container">
+                <div class="section-header" data-reveal-group>
+                    <div data-reveal>
+                        <p class="eyebrow">Selected Work</p>
+                        <h2 class="section-title" id="projects-heading">Featured <em>Projects</em></h2>
+                    </div>
+                    <p class="section-note" data-reveal>A selection of proposed, under-construction and completed work across residential, hospitality and mixed-use projects.</p>
+                    <a href="projects.html" class="section-link" data-reveal>
+                        View All Projects
+                        <span aria-hidden="true">&#8599;</span>
+                    </a>
+                </div>
+                <div class="project-rail-bar" data-reveal>
+                    <p class="project-rail-status" id="projectRailStatus" aria-live="polite">01 / 05</p>
+                    <div class="project-rail-controls" role="group" aria-label="Project gallery navigation">
+                        <button type="button" class="project-rail-btn" data-project-prev aria-label="Previous project" aria-controls="featuredProjects" disabled>
+                            <span aria-hidden="true">&#8592;</span>
+                        </button>
+                        <button type="button" class="project-rail-btn" data-project-next aria-label="Next project" aria-controls="featuredProjects">
+                            <span aria-hidden="true">&#8594;</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="project-rail" id="featuredProjects" data-project-rail data-reveal tabindex="0" role="region" aria-roledescription="carousel" aria-label="Selected projects"></div>
+            </div>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>Residential</span><i></i>
+                <span>Hospitality</span><i></i>
+                <span>Mixed-Use</span><i></i>
+                <span>Multi-Unit</span><i></i>
+                <span>Design &amp; Build</span><i></i>
+                <span>Project Management</span><i></i>
+                <span>Residential</span><i></i>
+                <span>Hospitality</span><i></i>
+                <span>Mixed-Use</span><i></i>
+                <span>Multi-Unit</span><i></i>
+                <span>Design &amp; Build</span><i></i>
+                <span>Project Management</span><i></i>
+            </div>
+        </div>
 
         <section class="home-intro" id="intro" aria-labelledby="intro-heading">
             <div class="container">
@@ -157,40 +202,6 @@
                 </div>
             </div>
             <span class="intro-mark" aria-hidden="true">CA</span>
-        </section>
-
-        <div class="marquee" aria-hidden="true">
-            <div class="marquee-track">
-                <span>Residential</span><i></i>
-                <span>Hospitality</span><i></i>
-                <span>Mixed-Use</span><i></i>
-                <span>Multi-Unit</span><i></i>
-                <span>Design &amp; Build</span><i></i>
-                <span>Project Management</span><i></i>
-                <span>Residential</span><i></i>
-                <span>Hospitality</span><i></i>
-                <span>Mixed-Use</span><i></i>
-                <span>Multi-Unit</span><i></i>
-                <span>Design &amp; Build</span><i></i>
-                <span>Project Management</span><i></i>
-            </div>
-        </div>
-
-        <section class="home-projects" aria-labelledby="projects-heading">
-            <div class="container">
-                <div class="section-header" data-reveal-group>
-                    <div data-reveal>
-                        <p class="eyebrow">Selected Work</p>
-                        <h2 class="section-title" id="projects-heading">Featured <em>Projects</em></h2>
-                    </div>
-                    <p class="section-note" data-reveal>A selection of proposed, under-construction and completed work across residential, hospitality and mixed-use projects.</p>
-                    <a href="projects.html" class="section-link" data-reveal>
-                        View All Projects
-                        <span aria-hidden="true">&#8599;</span>
-                    </a>
-                </div>
-                <div class="project-grid" id="featuredProjects" data-reveal-group></div>
-            </div>
         </section>
 
         <section class="home-services" aria-labelledby="services-heading">

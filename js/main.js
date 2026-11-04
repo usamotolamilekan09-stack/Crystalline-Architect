@@ -98,8 +98,9 @@ function renderProjectMedia(project, index, options = {}) {
   const ratioStyle = dimensions
     ? ` style="--media-ratio: ${dimensions.width} / ${dimensions.height}"`
     : '';
+  const sizes = options.sizes || '(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw';
   const srcset = project.coverImageSrcset
-    ? ` srcset="${escapeHtml(project.coverImageSrcset)}" sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"`
+    ? ` srcset="${escapeHtml(project.coverImageSrcset)}" sizes="${escapeHtml(sizes)}"`
     : '';
 
   const media = cover
@@ -129,11 +130,12 @@ function projectCardMarkup(project, index, options = {}) {
   const meta = escapeHtml(formatProjectMeta(project));
   const variant = options.variant || getProjectCardVariant(index);
   const variantClass = variant ? ` project-card--${variant}` : '';
+  const revealAttribute = options.reveal === false ? '' : ' data-reveal';
 
   return `
-    <a href="project.html?id=${encodeURIComponent(project.id)}" class="project-card${variantClass}" data-reveal aria-label="View project: ${title}">
+    <a href="project.html?id=${encodeURIComponent(project.id)}" class="project-card${variantClass}"${revealAttribute} aria-label="View project: ${title}">
       <span class="project-number" aria-hidden="true">${padProjectIndex(index)}</span>
-      ${renderProjectMedia(project, index, { eager: index === 0 })}
+      ${renderProjectMedia(project, index, { eager: options.eager !== undefined ? options.eager : index === 0, sizes: options.sizes })}
       <div class="project-info">
         <div>
           <p class="project-index">${padProjectIndex(index)} / Selected Work</p>
@@ -155,19 +157,136 @@ function renderFeaturedProjects() {
   if (!container) return;
 
   const ordered = getOrderedProjects();
-  const featured = ordered.filter(project => project.featured).slice(0, 3);
-  const selection = featured.length ? featured : ordered.slice(0, 3);
 
-  if (!selection.length) {
+  if (!ordered.length) {
     container.innerHTML = '<p class="project-grid-message">Projects will be published here.</p>';
+    document.querySelectorAll('[data-project-prev], [data-project-next]').forEach(button => {
+      button.disabled = true;
+    });
+    const status = document.getElementById('projectRailStatus');
+    if (status) status.textContent = '00 / 00';
     return;
   }
 
-  container.innerHTML = selection
-    .map((project, index) => projectCardMarkup(project, index))
+  container.innerHTML = ordered
+    .map((project, index) => projectCardMarkup(project, index, {
+      variant: 'slide',
+      reveal: false,
+      sizes: '(max-width: 780px) 78vw, (max-width: 1100px) 75vw, 68rem'
+    }))
     .join('');
 
+  initProjectRail();
   refreshMotion();
+}
+
+function initProjectRail() {
+  const rail = document.getElementById('featuredProjects');
+  if (!rail) return;
+
+  const slides = Array.from(rail.querySelectorAll('.project-card--slide'));
+  const prevButton = document.querySelector('[data-project-prev]');
+  const nextButton = document.querySelector('[data-project-next]');
+  const status = document.getElementById('projectRailStatus');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  if (!slides.length) return;
+
+  let targetIndex = null;
+  let settleTimer = null;
+
+  const getActiveIndex = () => {
+    const railLeft = rail.getBoundingClientRect().left;
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    slides.forEach((slide, index) => {
+      const distance = Math.abs(slide.getBoundingClientRect().left - railLeft);
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    return closestIndex;
+  };
+
+  const updateControls = (index) => {
+    const activeIndex = index === undefined ? getActiveIndex() : index;
+
+    if (prevButton) prevButton.disabled = activeIndex <= 0;
+    if (nextButton) nextButton.disabled = activeIndex >= slides.length - 1;
+    if (status) {
+      status.textContent = `${padProjectIndex(activeIndex)} / ${String(slides.length).padStart(2, '0')}`;
+    }
+  };
+
+  const scrollToIndex = (index) => {
+    const nextIndex = Math.max(0, Math.min(slides.length - 1, index));
+    const slide = slides[nextIndex];
+    const offset = slide.getBoundingClientRect().left - rail.getBoundingClientRect().left;
+
+    targetIndex = nextIndex;
+    updateControls(nextIndex);
+
+    rail.scrollTo({
+      left: rail.scrollLeft + offset,
+      behavior: prefersReducedMotion.matches ? 'auto' : 'smooth'
+    });
+
+    window.clearTimeout(settleTimer);
+    settleTimer = window.setTimeout(() => {
+      targetIndex = null;
+      updateControls(getActiveIndex());
+    }, 700);
+  };
+
+  if (prevButton) {
+    prevButton.addEventListener('click', () => {
+      const index = targetIndex === null ? getActiveIndex() : targetIndex;
+      scrollToIndex(index - 1);
+    });
+  }
+
+  if (nextButton) {
+    nextButton.addEventListener('click', () => {
+      const index = targetIndex === null ? getActiveIndex() : targetIndex;
+      scrollToIndex(index + 1);
+    });
+  }
+
+  rail.addEventListener('scroll', () => {
+    if (targetIndex !== null) return;
+
+    window.requestAnimationFrame(() => {
+      updateControls(getActiveIndex());
+    });
+  }, { passive: true });
+
+  rail.addEventListener('keydown', event => {
+    const index = targetIndex === null ? getActiveIndex() : targetIndex;
+
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      scrollToIndex(index - 1);
+    } else if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      scrollToIndex(index + 1);
+    } else if (event.key === 'Home') {
+      event.preventDefault();
+      scrollToIndex(0);
+    } else if (event.key === 'End') {
+      event.preventDefault();
+      scrollToIndex(slides.length - 1);
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    targetIndex = null;
+    updateControls(getActiveIndex());
+  }, { passive: true });
+
+  updateControls(0);
 }
 
 function renderAllProjects(filterCategory = 'all') {
