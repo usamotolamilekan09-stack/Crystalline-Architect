@@ -1616,6 +1616,11 @@ p {
   color: var(--muted);
 }
 
+.footer-slogan {
+  max-width: 100%;
+  text-wrap: balance;
+}
+
 .footer-top {
   display: inline-flex;
   align-items: center;
