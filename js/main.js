@@ -138,7 +138,7 @@ function projectCardMarkup(project, index, options = {}) {
       ${renderProjectMedia(project, index, { eager: options.eager !== undefined ? options.eager : index === 0, sizes: options.sizes })}
       <div class="project-info">
         <div>
-          <p class="project-index">${padProjectIndex(index)} / Selected Work</p>
+          <p class="project-index">Project ${padProjectIndex(index)}</p>
           <h3 class="project-title">${title}</h3>
           <p class="project-meta">${meta}</p>
         </div>
