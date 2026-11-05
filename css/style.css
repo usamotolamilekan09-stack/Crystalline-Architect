@@ -2884,6 +2884,15 @@ p {
     opacity: 0.62;
   }
 
+  .hero-frame--main figcaption {
+    top: calc(var(--nav-height) + 0.75rem);
+    right: var(--gutter);
+    bottom: auto;
+    left: auto;
+    align-items: flex-end;
+    text-align: right;
+  }
+
   .hero-frame--tall,
   .hero-frame--detail {
     display: none;
