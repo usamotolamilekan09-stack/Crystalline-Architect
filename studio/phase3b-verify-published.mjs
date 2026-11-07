@@ -5,10 +5,10 @@ const client = getCliClient({apiVersion: '2025-02-19'}).withConfig({perspective:
 const expected = {
   1: {id: 'project-legacy-1', title: 'Three-Bedroom Duplex', slug: 'three-bedroom-duplex-ibadan', images: 2},
   2: {id: 'project-legacy-2', title: 'Hotel', slug: 'hotel-ikorodu', images: 3},
-  3: {id: 'project-legacy-3', title: 'Residential Building Design', slug: 'residential-project', images: 2},
+  3: {id: 'project-legacy-3', title: 'Five-Bedroom Duplex with Two-Bedroom Units', slug: 'residential-project', images: 2},
   4: {
     id: 'project-legacy-4',
-    title: 'Five-Bedroom Duplex with Two-Bedroom Units',
+    title: '2 Units of 2-Bedroom Apartments',
     slug: 'five-bedroom-duplex-two-bedroom-units',
     images: 2,
   },
@@ -16,7 +16,7 @@ const expected = {
 }
 
 const projects = await client.fetch(
-  `*[_type == "project"] | order(legacyId asc) {
+  `*[_type == "project" && defined(legacyId)] | order(legacyId asc) {
     _id,
     _rev,
     legacyId,
@@ -79,12 +79,12 @@ if (categories.some((category) => category._id.startsWith('drafts.'))) {
 
 const residential = projects.find((project) => project.legacyId === 3)
 if (!residential) {
-  failures.push('Residential Building Design project not found')
+  failures.push('Five-Bedroom Duplex project not found')
 } else {
-  if (residential.shortDescription !== 'A residential building design presented through two exterior renders.') {
+  if (residential.shortDescription !== 'A five-bedroom duplex with two-bedroom units, presented through two exterior renders.') {
     failures.push(`Residential shortDescription mismatch: ${residential.shortDescription}`)
   }
-  if (residential.description !== 'A residential building design documented through two exterior renders.') {
+  if (residential.description !== 'A five-bedroom duplex with two-bedroom units, documented through two exterior renders.') {
     failures.push(`Residential description mismatch: ${residential.description}`)
   }
   const unsupported = /floor plan|interior stud|moodboard|material board/i

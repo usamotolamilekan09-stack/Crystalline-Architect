@@ -5,8 +5,8 @@ const client = getCliClient({apiVersion: '2025-02-19'}).withConfig({perspective:
 const expectedLegacy = {
   1: 'Three-Bedroom Duplex',
   2: 'Hotel',
-  3: 'Residential Building Design',
-  4: 'Five-Bedroom Duplex with Two-Bedroom Units',
+  3: 'Five-Bedroom Duplex with Two-Bedroom Units',
+  4: '2 Units of 2-Bedroom Apartments',
   5: 'Mixed-Use Development',
 }
 
